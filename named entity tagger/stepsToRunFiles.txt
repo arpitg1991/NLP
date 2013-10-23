@@ -1,0 +1,11 @@
+STEPS to run files : 
+
+
+python hw1q6.py ner_train.dat  #produces file ner_train_regex.dat , with words replaced by appropriate categories
+
+python count_freqs.py ner_train_regex.dat > ner_q6.counts
+
+python hw1q6b.py ner_q6.counts ner_dev.dat
+#this creates a file of predicted tags viterbi_results_q6.dat
+
+python eval_ne_tagger.py ner_dev.key viterbi_results_q6.dat
